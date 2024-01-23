@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { MedalIcon, MenuIcon } from 'lucide-react'
+import { MenuIcon } from 'lucide-react'
 import { SideNavigation } from './SideNavigation'
 
 const linkStyle = `relative after:absolute after:bottom-[-0.2rem] 
@@ -31,8 +31,8 @@ export const NoAuthHeader: React.FC = () => {
       </div>
 
       <Link href={'/'} className="flex items-center justify-center gap-2  ">
-        <MedalIcon color="white" className="max-[345px]:hidden" />
-        <h2 className="text-white text-4xl max-[345px]:text-3xl">
+        {/*    <MedalIcon color="white" className="max-[345px]:hidden" /> */}
+        <h2 className="text-white text-4xl max-[345px]:text-3xl font-extrabold">
           {companyName}
         </h2>
       </Link>

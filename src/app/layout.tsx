@@ -1,9 +1,22 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import { Poppins as FontSans } from 'next/font/google'
+import localFont from 'next/font/local'
+import { cn } from '@/lib/utils'
+
 import { ThemeProvider } from './_components/theme-provider'
 
-const inter = Inter({ subsets: ['latin'] })
+import './globals.css'
+
+const font = FontSans({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-sans',
+})
+
+const fontHeading = localFont({
+  src: '../assets/Poppins/Poppins-ExtraBold.ttf',
+  variable: '--font-heading',
+})
 
 export const metadata: Metadata = {
   title: 'All Games App',
@@ -26,7 +39,13 @@ type RootLayoutParams = {
 export default function RootLayout({ children }: RootLayoutParams) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>
+      <body
+        className={cn(
+          'min-h-screen bg-background font-sans antialiased',
+          font.variable,
+          fontHeading.variable,
+        )}
+      >
         <ThemeProvider attribute="class" defaultTheme="light">
           {children}
         </ThemeProvider>

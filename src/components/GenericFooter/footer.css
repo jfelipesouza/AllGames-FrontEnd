@@ -1,3 +1,7 @@
 .iconButton:hover #icon {
   color: white;
 }
+
+.iconButton:focus-visible #icon {
+  color: white;
+}
