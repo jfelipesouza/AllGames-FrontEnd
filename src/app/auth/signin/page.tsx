@@ -1,0 +1,13 @@
+const SignInPage = () => {
+  return (
+    <div
+      className={
+        'flex flex-col min-h-screen bg-background dark:bg-slate-900 h-auto'
+      }
+    >
+      POkemon
+    </div>
+  )
+}
+
+export default SignInPage

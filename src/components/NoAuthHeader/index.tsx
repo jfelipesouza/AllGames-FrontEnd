@@ -1,14 +1,10 @@
 'use client'
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { MenuIcon } from 'lucide-react'
-import { SideNavigation } from './SideNavigation'
 
-const linkStyle = `relative after:absolute after:bottom-[-0.2rem] 
-after:left-0 after:content-[""] after:w-[0%] after:h-[0.12rem]
-after:rounded-md after:bg-white hover:after:w-[100%] after:transition-all 
-after:ease-linear after:duration-[0.4s] text-xl text-slate-50 font-semibold
-transition-transform scale-95 hover:scale-100`
+import { linkStyle } from '@/lib/utils'
+import { MenuIcon } from 'lucide-react'
+import Link from 'next/link'
+import React, { useState } from 'react'
+import { SideNavigation } from './SideNavigation'
 
 export const NoAuthHeader: React.FC = () => {
   const companyName = process.env.NEXT_PUBLIC_COMPANY_NAME
@@ -31,16 +27,15 @@ export const NoAuthHeader: React.FC = () => {
       </div>
 
       <Link href={'/'} className="flex items-center justify-center gap-2  ">
-        {/*    <MedalIcon color="white" className="max-[345px]:hidden" /> */}
         <h2 className="text-white text-4xl max-[345px]:text-3xl font-extrabold">
           {companyName}
         </h2>
       </Link>
       <div className="flex flex-row items-center justify-center gap-4 max-[445px]:hidden">
-        <Link href={'/signin'} className={linkStyle}>
+        <Link href={'/auth/signin'} className={linkStyle}>
           SignIn
         </Link>
-        <Link href={'/register'} className={linkStyle}>
+        <Link href={'/aurh/register'} className={linkStyle}>
           Register
         </Link>
       </div>

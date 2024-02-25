@@ -1,7 +1,7 @@
+import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import { Poppins as FontSans } from 'next/font/google'
 import localFont from 'next/font/local'
-import { cn } from '@/lib/utils'
 
 import { ThemeProvider } from './_components/theme-provider'
 

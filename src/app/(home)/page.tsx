@@ -1,4 +1,6 @@
-const SignInPage = () => {
+import Image from 'next/image'
+
+const HomePage: React.FC = () => {
   return (
     <div
       className={
@@ -8,4 +10,4 @@ const SignInPage = () => {
   )
 }
 
-export default SignInPage
+export default HomePage
